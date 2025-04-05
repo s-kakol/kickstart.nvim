@@ -16,10 +16,6 @@ vim.g.have_nerd_font = false
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 
--- Set Column Guide to default 80
-vim.o.textwidth = 80
-vim.o.colorcolumn = '+1'
-
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -158,7 +154,15 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   'tpope/vim-surround', -- Surronding motions, "ysiw"
-
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v2.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons',
+      'MunifTanjim/nui.nvim',
+    },
+  },
   {
     'Bekaboo/dropbar.nvim',
     dependencies = {
